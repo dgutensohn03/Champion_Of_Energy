@@ -25,7 +25,7 @@ var AppSettings = new function () {
 
 	this.NextButton = new function() {
 		/// Is the next button locked by default?
-		this.locked = true;
+		this.locked = false;
 	};
 	
 	this.LMS = new function() {
