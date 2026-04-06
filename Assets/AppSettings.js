@@ -29,7 +29,7 @@ var AppSettings = new function () {
 	};
 	
 	this.LMS = new function() {
-		this.enabled = true;
+		this.enabled = false;
 
 		/// LMS Type (SCORM1.2, SCORM2004, AICC, TinCan, Storyline)
 		this.version = "SCORM1.2";
