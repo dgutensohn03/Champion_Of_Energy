@@ -57,7 +57,8 @@ var AppSettings = new function () {
 			'xceleratemedia.com/demos',
 			'xm-cloud.cloudapp.net',
 			'localhost',
-			'127.0.0.1'
+			'127.0.0.1',
+			'https://dgutensohn03.github.io/'
 		];
 
 		/// Toggle demo and connection alerts.
