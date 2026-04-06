@@ -74,23 +74,34 @@
             });
         });
 
-        var popcorn1 = Popcorn('#player1');
+ var popcorn1 = Popcorn('#player1');
 
-        //popcorn1.currentTime(20);
+    // Wait for video metadata to load so Popcorn knows duration
+    $('#player1').on('loadedmetadata', function() {
+console.log("Player 1 loaded")
+        // Set video to start at 1 second
+        popcorn1.currentTime(1);
+
+        // First cue at 1.6 seconds
         popcorn1.cue(1.6, function () {
             popcorn1.pause();
             $('#btn-start').show();
         });
 
+        // Second cue at 62 seconds
         popcorn1.cue(62, function () {
             popcorn1.pause();
             $('#btn-1').show();
         });
 
-        function continuePlaying() {
-            $('video')[0].play();
-            $('#btn-start').hide();
-        }
+        // Play video after setting current time
+        popcorn1.play();
+    });
+
+    function continuePlaying() {
+        popcorn1.play();  // resume video
+        $('#btn-start').hide();
+    }
     </script>
 </body>
 </html>
