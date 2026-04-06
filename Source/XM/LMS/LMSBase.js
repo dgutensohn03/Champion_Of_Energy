@@ -5,7 +5,7 @@
 (function () {
 	var LMSBase = {
 		//-- User Notifications
-		inDemoMode: false,
+		inDemoMode: true,
 		hasAlerted: false,
 
 		AlertFailedToConnect: function() {
